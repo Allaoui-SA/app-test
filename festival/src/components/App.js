@@ -6,6 +6,8 @@ import Dashboard from "./Dashboard"
 import Signup from "./Signup"
 import Login from "./Login"
 import PrivateRoute from "./PrivateRoute"
+import ForgotPassword from "./ForgotPassword"
+import UpdateProfile from "./UpdateProfile"
 
 
 function App() {
@@ -18,13 +20,6 @@ function App() {
           <AuthProvider>
             <Routes>
               <Route 
-                 path="/" 
-                element={
-                  <PrivateRoute path="/">
-                    <Dashboard />
-                  </PrivateRoute>
-                } />
-              <Route 
                 path="/signup" 
                 element={
                   <PrivateRoute path="/signup">
@@ -36,6 +31,27 @@ function App() {
                 element={
                   <PrivateRoute path="/login">
                     <Login />
+                  </PrivateRoute>
+                } />
+              <Route 
+                path="/forgot-password" 
+                element={
+                  <PrivateRoute path="/forgot-password">
+                    <ForgotPassword />
+                  </PrivateRoute>
+                } />
+              <Route 
+                 exact path="/" 
+                element={
+                  <PrivateRoute exact path="/">
+                    <Dashboard />
+                  </PrivateRoute>
+                } />
+              <Route 
+                 path="/update-profile" 
+                element={
+                  <PrivateRoute path="/update-profile">
+                    <UpdateProfile />
                   </PrivateRoute>
                 } />
             </Routes>

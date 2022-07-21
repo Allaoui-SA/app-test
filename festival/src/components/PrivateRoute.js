@@ -10,8 +10,8 @@ const { currentUser } = useAuth()
   // Si un utilisateur est connecté
   if (currentUser) {
     
-    // Si l'url chemine vers la vue Login ou Signup 
-    if (path === '/login' || path === '/signup') {
+    // Si l'url chemine vers les vues Login, Signup ou ForgotPassword 
+    if (path === '/login' || path === '/signup' || path === '/forgot-password') {
       // rediriger vers la home/dashboard
       return <Navigate to="/" />
     }    
@@ -21,8 +21,8 @@ const { currentUser } = useAuth()
     // Fin de condition Connecté et page Login ou Signup
   }
 
-  // Sinon si aucun utilisateur n'est connecté et que l'url chemine vers Login ou Signup
-  else if (path === '/login' || path === '/signup') {
+  // Sinon si aucun utilisateur n'est connecté et que l'url chemine vers Login, Signup ou ForgotPassword
+  else if (path === '/login' || path === '/signup' || path === '/forgot-password') {
     // Retouner l'enfant du composant PrivateRoute
     return children
   }
