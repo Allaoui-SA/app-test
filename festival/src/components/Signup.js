@@ -35,7 +35,8 @@ export default function Signup() {
     <>
       <Card>
           <Card.Body>
-              <h2 className="text-center mb-4">Sign Up</h2>
+              <h2 className="text-center mb-4">Festiv&apos;App</h2>
+              <p>A place where all festival-goers share their best festival moments</p>
               {error && <Alert variant="danger">{error}</Alert>}
               <Form onSubmit={handleSubmit}>
                   <Form.Group className="mb-4" id="email">

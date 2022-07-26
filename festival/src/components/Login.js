@@ -30,7 +30,8 @@ export default function Login() {
     <>
       <Card>
           <Card.Body>
-              <h2 className="text-center mb-4">Log In</h2>
+              <h2 className="text-center mb-4">Festiv&apos;App</h2>
+              <p>A place where all festival-goers share their best festival moments</p>
               {error && <Alert variant="danger">{error}</Alert>}
               <Form onSubmit={handleSubmit}>
                   <Form.Group className="mb-4" id="email">
@@ -49,7 +50,7 @@ export default function Login() {
           </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-          Don't have an account? <Link to="/signup">Sign Up</Link>
+          Don't have an account yet? <Link to="/signup">Register now</Link>
       </div>
     </>
   )
